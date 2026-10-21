@@ -1,0 +1,84 @@
+package contollers.book;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+
+public class BookPageController {
+
+    @FXML
+    private Button btnAddBook;
+
+    @FXML
+    private Button btnAddMembers;
+
+    @FXML
+    private Button btnClick;
+
+    @FXML
+    private Button btnDashBoard;
+
+    @FXML
+    private Button btnHistory;
+
+    @FXML
+    private Button btnIssuseBook;
+
+    @FXML
+    private Button btnReturnBook;
+
+    @FXML
+    void btnAddBookOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnAddMembersOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnClickOnAction(ActionEvent event) {
+        Stage stage = new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/add_book.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
+
+    }
+
+    @FXML
+    void btnDashBoardOnAction(ActionEvent event) {
+        Stage stage=new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/home_page.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
+
+    }
+
+    @FXML
+    void btnHistoryOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnIssuseBookOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnReturnBookOnAction(ActionEvent event) {
+
+    }
+
+}

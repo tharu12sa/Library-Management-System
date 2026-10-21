@@ -50,6 +50,11 @@
                   <Insets top="5.0" />
                </VBox.margin>
             </TextField>
+            <Label fx:id="lblError" prefHeight="18.0" prefWidth="297.0">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
             <Label alignment="TOP_RIGHT" prefHeight="18.0" prefWidth="298.0" text="Forgot password?">
                <VBox.margin>
                   <Insets top="30.0" />
@@ -70,5 +75,6 @@
                </image></ImageView>
          </children>
       </AnchorPane>
+      <Button fx:id="btnreset" layoutX="575.0" layoutY="444.0" mnemonicParsing="false" onAction="#btnresetOnAction" text="reset" />
    </children>
 </AnchorPane>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="680.0" prefWidth="906.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="contollers.book.BookPageController">
+    <children>
+        <VBox layoutY="36.0" prefHeight="645.0" prefWidth="202.0" style="-fx-border-color: #1123;">
+            <children>
+                <Button fx:id="btnDashBoard" alignment="CENTER" mnemonicParsing="false" onAction="#btnDashBoardOnAction" prefHeight="38.0" prefWidth="202.0" text="DashBoard">
+                    <VBox.margin>
+                        <Insets top="20.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="btnAddBook" alignment="CENTER" layoutX="10.0" layoutY="30.0" mnemonicParsing="false" onAction="#btnAddBookOnAction" prefHeight="38.0" prefWidth="202.0" text="Books">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="btnAddMembers" alignment="CENTER" layoutX="10.0" layoutY="68.0" mnemonicParsing="false" onAction="#btnAddMembersOnAction" prefHeight="38.0" prefWidth="202.0" text="Members">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="btnIssuseBook" alignment="CENTER" layoutX="10.0" layoutY="107.0" mnemonicParsing="false" onAction="#btnIssuseBookOnAction" prefHeight="38.0" prefWidth="202.0" text="Issuse Book">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="btnReturnBook" alignment="CENTER" layoutX="10.0" layoutY="145.0" mnemonicParsing="false" onAction="#btnReturnBookOnAction" prefHeight="38.0" prefWidth="202.0" text="Retrun Book">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="btnHistory" alignment="CENTER" layoutX="10.0" layoutY="184.0" mnemonicParsing="false" onAction="#btnHistoryOnAction" prefHeight="38.0" prefWidth="202.0" text="History">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Button>
+            </children></VBox>
+      <Label alignment="CENTER" layoutX="386.0" layoutY="14.0" prefHeight="30.0" prefWidth="222.0" text="Book Page">
+         <font>
+            <Font name="Bookman Old Style Bold" size="12.0" />
+         </font>
+      </Label>
+      <Pane layoutX="222.0" layoutY="36.0" prefHeight="148.0" prefWidth="666.0">
+         <children>
+            <Button fx:id="btnClick" layoutX="313.0" layoutY="49.0" mnemonicParsing="false" onAction="#btnClickOnAction" prefHeight="25.0" prefWidth="114.0" text="CLICK" />
+            <Label alignment="CENTER" layoutX="52.0" layoutY="47.0" prefHeight="30.0" prefWidth="144.0" text="Add Books">
+               <font>
+                  <Font name="Book Antiqua Bold Italic" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ScrollPane layoutX="231.0" layoutY="221.0" prefHeight="455.0" prefWidth="666.0">
+         <content>
+            <TableView prefHeight="496.0" prefWidth="1014.8004883">
+              <columns>
+                <TableColumn prefWidth="100.0" text="Book ID" />
+                <TableColumn prefWidth="230.0" text="Book Title" />
+                  <TableColumn prefWidth="220.0" text="Author" />
+                  <TableColumn prefWidth="200.0" text=" Category" />
+                  <TableColumn prefWidth="160.0" text="Published Year" />
+                  <TableColumn prefWidth="104.800048828125" text="Quantity" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+    </children>
+</AnchorPane>
