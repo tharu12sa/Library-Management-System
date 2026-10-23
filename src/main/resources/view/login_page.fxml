@@ -45,7 +45,7 @@
                   <Insets top="30.0" />
                </VBox.margin>
             </Label>
-            <TextField fx:id="txtPassword" layoutX="10.0" layoutY="161.0">
+            <TextField fx:id="txtPassword" layoutX="10.0" layoutY="161.0" onKeyPressed="#txtPasswordOnAction">
                <VBox.margin>
                   <Insets top="5.0" />
                </VBox.margin>
