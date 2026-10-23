@@ -88,4 +88,11 @@ public class BookPageController {
 
     }
 
+    @FXML
+    public void btnViewOnAction(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void btnIssueBookOnAction(ActionEvent actionEvent) {
+    }
 }
