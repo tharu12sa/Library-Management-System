@@ -72,4 +72,15 @@ public class HomePageContoller {
 
     }
 
+    @FXML
+    public void btnViewOnAction(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void btnIssuseOnAction(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void btnReturnOnAction(ActionEvent actionEvent) {
+    }
 }

@@ -29,17 +29,22 @@
                   <Insets top="10.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="btnIssuseBook" alignment="CENTER" layoutX="10.0" layoutY="107.0" mnemonicParsing="false" onAction="#btnIssuseBookOnAction" prefHeight="38.0" prefWidth="202.0" text="Issuse Book">
+            <Button fx:id="btnView" alignment="CENTER" layoutX="10.0" layoutY="107.0" mnemonicParsing="false" onAction="#btnViewOnAction" prefHeight="38.0" prefWidth="202.0" text="View">
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="btnReturnBook" alignment="CENTER" layoutX="10.0" layoutY="145.0" mnemonicParsing="false" onAction="#btnReturnBookOnAction" prefHeight="38.0" prefWidth="202.0" text="Retrun Book">
+            <Button fx:id="btnIssuseBook" alignment="CENTER" layoutX="10.0" layoutY="145.0" mnemonicParsing="false" onAction="#btnIssuseOnAction" prefHeight="38.0" prefWidth="202.0" text="Issuse Book">
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="btnHistory" alignment="CENTER" layoutX="10.0" layoutY="184.0" mnemonicParsing="false" onAction="#btnHistoryOnAction" prefHeight="38.0" prefWidth="202.0" text="History">
+            <Button fx:id="btnReturn" alignment="CENTER" layoutX="10.0" layoutY="184.0" mnemonicParsing="false" onAction="#btnReturnOnAction" prefHeight="38.0" prefWidth="202.0" text="Return Book">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnHistory" alignment="CENTER" layoutX="11.0" layoutY="177.0" mnemonicParsing="false" onAction="#btnHistoryOnAction" prefHeight="38.0" prefWidth="202.0" text=" History">
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>
