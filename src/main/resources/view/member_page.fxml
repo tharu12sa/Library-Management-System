@@ -30,21 +30,26 @@
                         <Insets top="10.0" />
                     </VBox.margin>
                 </Button>
-                <Button fx:id="btnIssuseBook" alignment="CENTER" layoutX="10.0" layoutY="107.0" mnemonicParsing="false" onAction="#btnIssuseBookOnAction" prefHeight="38.0" prefWidth="202.0" text="Issuse Book">
+                <Button fx:id="btnView" alignment="CENTER" layoutX="10.0" layoutY="107.0" mnemonicParsing="false" onAction="#btnViewOnAction" prefHeight="38.0" prefWidth="202.0" text="View">
                     <VBox.margin>
                         <Insets top="10.0" />
                     </VBox.margin>
                 </Button>
-                <Button fx:id="btnReturnBook" alignment="CENTER" layoutX="10.0" layoutY="145.0" mnemonicParsing="false" onAction="#btnReturnBookOnAction" prefHeight="38.0" prefWidth="202.0" text="Retrun Book">
+                <Button fx:id="btnIssueBook" alignment="CENTER" layoutX="10.0" layoutY="145.0" mnemonicParsing="false" onAction="#btnIssueBookOnAction" prefHeight="38.0" prefWidth="202.0" text="Issue Book">
                     <VBox.margin>
                         <Insets top="10.0" />
                     </VBox.margin>
                 </Button>
-                <Button fx:id="btnHistory" alignment="CENTER" layoutX="10.0" layoutY="184.0" mnemonicParsing="false" onAction="#btnHistoryOnAction" prefHeight="38.0" prefWidth="202.0" text="History">
+                <Button fx:id="btnReturnBook" alignment="CENTER" layoutX="10.0" layoutY="184.0" mnemonicParsing="false" onAction="#btnReturnBookOnAction" prefHeight="38.0" prefWidth="202.0" text="Return Book">
                     <VBox.margin>
                         <Insets top="10.0" />
                     </VBox.margin>
                 </Button>
+            <Button fx:id="btnHistory" alignment="CENTER" layoutX="11.0" layoutY="275.0" mnemonicParsing="false" onAction="#btnHistoryOnAction" prefHeight="38.0" prefWidth="202.0" text="History">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
             </children></VBox>
         <Label alignment="CENTER" layoutX="386.0" layoutY="14.0" prefHeight="30.0" prefWidth="222.0" text="Member Page">
             <font>

@@ -89,4 +89,11 @@ public class MemberPageController {
 
     }
 
+    @FXML
+    public void btnViewOnAction(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void btnIssueBookOnAction(ActionEvent actionEvent) {
+    }
 }
