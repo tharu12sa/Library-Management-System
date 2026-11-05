@@ -1,5 +1,7 @@
 package contollers.login;
 
+import contollers.db.DBConnection;
+
 import java.sql.*;
 
 public class LoginContoller {
@@ -9,24 +11,28 @@ public class LoginContoller {
 //        }
 //    return false;
    // }
+//------------------------------------------------------------------------------
 
-    Connection connection;
 
-    {
-        try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/student_management_system_v1"
-                    ,"root","Tharu12");
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }
+//    Connection connection;
+//
+//    {
+//        try {
+//            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/library_management_system_v1"
+//                    ,"root","Tharu12");
+//        } catch (SQLException e) {
+//            throw new RuntimeException(e);
+//        }
+//    }
+
+    Connection connection = DBConnection.getConnection();
 
     public void testConeection(){
         System.out.println(connection);
     }
 
     public boolean cheakUserNameAndPassword(String userName, String password) {
-        String sql = "Select * from users";
+        String sql = "Select * from user";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet resultSet = preparedStatement.executeQuery();

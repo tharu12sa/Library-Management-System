@@ -62,6 +62,8 @@ public class LoginPageContoller {
            }
            mainDashBoard.show();
 
+       }else{
+           lblError.setText("Invalid Username or Password!");
        }
     }
 
@@ -75,6 +77,8 @@ public class LoginPageContoller {
             }
             mainDashBoard.show();
 
+        }else {
+            lblError.setText("Invalid Username or Password!");
         }
     }
 }

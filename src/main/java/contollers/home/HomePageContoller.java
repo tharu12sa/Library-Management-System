@@ -11,6 +11,8 @@ import java.io.IOException;
 
 public class HomePageContoller {
 
+    Stage addBookStage = new Stage();
+
     @FXML
     private Button btnAddBook;
 
@@ -31,13 +33,13 @@ public class HomePageContoller {
 
     @FXML
     void btnAddBookOnAction(ActionEvent event) {
-        Stage stage = new Stage();
+
         try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/book_page.fxml"))));
+            addBookStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/book_page.fxml"))));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        stage.show();
+        addBookStage.show();
 
     }
 
