@@ -79,10 +79,7 @@ public class MemberPageController {
 
     }
 
-    @FXML
-    void btnIssuseBookOnAction(ActionEvent event) {
 
-    }
 
     @FXML
     void btnReturnBookOnAction(ActionEvent event) {
