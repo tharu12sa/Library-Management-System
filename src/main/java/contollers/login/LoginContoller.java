@@ -25,7 +25,8 @@ public class LoginContoller {
 //        }
 //    }
 
-    Connection connection = DBConnection.getConnection();
+    DBConnection dbConnection = DBConnection.getInstance();
+    Connection connection = dbConnection.getConnection();
 
     public void testConeection(){
         System.out.println(connection);
@@ -45,9 +46,12 @@ public class LoginContoller {
                     return true;
                 }
             }
+            testConeection();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
         return false;
+
     }
+
 }

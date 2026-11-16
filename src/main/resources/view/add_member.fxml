@@ -48,6 +48,6 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <DatePicker fx:id="txtBirthday" layoutX="195.0" layoutY="310.0"/>
+      <DatePicker fx:id="txtBirthday" layoutX="195.0" layoutY="310.0" />
     </children>
 </AnchorPane>

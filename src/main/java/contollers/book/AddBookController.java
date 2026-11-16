@@ -17,11 +17,13 @@ public class AddBookController {
 //        }
 //    }
 
-    Connection connection = DBConnection.getConnection();
+    DBConnection dbConnection = DBConnection.getInstance();
+    Connection connection = dbConnection.getConnection();
 
     public void addSBook(int bookId, String category, String bookTitel, int quantity, String author, String Year){
         String Sql = "INSERT INTO books(book_id,book_titel,author,category,published_year,quantity) " +
                 "VALUES (?,?,?,?,?,?)";
+        System.out.println(connection);
 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(Sql);
@@ -34,6 +36,7 @@ public class AddBookController {
             preparedStatement.setInt(6,quantity);
 
             preparedStatement.executeUpdate();
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
