@@ -1,12 +1,19 @@
 package contollers.book;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class AddBookPageController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class AddBookPageController implements Initializable {
 
     AddBookController addBookController= new AddBookController();
 
@@ -20,7 +27,7 @@ public class AddBookPageController {
     private TextField txtBookTitel;
 
     @FXML
-    private TextField txtCategory;
+    private ComboBox<String> cmbCategory;
 
     @FXML
     private TextField txtQuantity;
@@ -30,7 +37,7 @@ public class AddBookPageController {
 
     @FXML
     void btnAddBookOnAction(ActionEvent event) {
-        addBookController.addSBook(Integer.parseInt(txtBookId.getText()),txtCategory.getText(),txtBookTitel.getText(),
+        addBookController.addSBook(Integer.parseInt(txtBookId.getText()),cmbCategory.getValue(),txtBookTitel.getText(),
                 Integer.parseInt(txtQuantity.getText()),
                 txtAuthor.getText(), String.valueOf(txtYear.getValue()));
         Stage stage = (Stage) txtBookId.getScene().getWindow();
@@ -38,4 +45,12 @@ public class AddBookPageController {
 
     }
 
+    ObservableList<String> category= FXCollections.observableArrayList("Horror","Fantasy","Science Fiction","Romance","Educational");
+    public void setCmbCategory(){
+        cmbCategory.setItems(category);
+    }
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        setCmbCategory();
+    }
 }

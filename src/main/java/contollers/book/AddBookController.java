@@ -17,8 +17,8 @@ public class AddBookController {
 //        }
 //    }
 
-    DBConnection dbConnection = DBConnection.getInstance();
-    Connection connection = dbConnection.getConnection();
+
+    Connection connection = DBConnection.getInstance().getConnection();
 
     public void addSBook(int bookId, String category, String bookTitel, int quantity, String author, String Year){
         String Sql = "INSERT INTO books(book_id,book_titel,author,category,published_year,quantity) " +

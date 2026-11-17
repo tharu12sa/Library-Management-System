@@ -15,8 +15,8 @@ public class AddMemberController {
 //            throw new RuntimeException(e);
 //        }
 //    }
-    DBConnection dbConnection = DBConnection.getInstance();
-    Connection connection = dbConnection.getConnection();
+
+    Connection connection = DBConnection.getInstance().getConnection();
 
 
     public void addMember(int  member_id, String member_name, String address, String email, String nic, String birthday){

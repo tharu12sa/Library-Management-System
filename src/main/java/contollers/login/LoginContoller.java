@@ -25,8 +25,8 @@ public class LoginContoller {
 //        }
 //    }
 
-    DBConnection dbConnection = DBConnection.getInstance();
-    Connection connection = dbConnection.getConnection();
+
+    Connection connection = DBConnection.getInstance().getConnection();
 
     public void testConeection(){
         System.out.println(connection);
