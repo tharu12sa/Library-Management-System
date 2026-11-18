@@ -9,6 +9,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
+import scene.SceneManager;
 
 import java.io.IOException;
 
@@ -42,43 +43,18 @@ public class LoginPageContoller {
 
     @FXML
     void btnOnAction(ActionEvent event) {
-//        if (LoginContoller.cheakUserNameAndPassword(txtUserName.getText(), txtPassword.getText())) {
-//            Stage stage = new Stage();
-//            try {
-//                stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/home_page.fxml"))));
-//            } catch (IOException e) {
-//                throw new RuntimeException(e);
-//            }
-//            stage.show();
-//        }else {
-//            lblError.setText("Invalid Username or Password!");
-//        }
 
        if(loginContoller.cheakUserNameAndPassword(txtUserName.getText(),txtPassword.getText())) {
-           try {
-               mainDashBoard.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/home_page.fxml"))));
-           } catch (IOException e) {
-               throw new RuntimeException(e);
-           }
-           mainDashBoard.show();
 
-       }else{
-           lblError.setText("Invalid Username or Password!");
+           SceneManager.switchPage("/view/home_page.fxml");
        }
     }
 
     @FXML
     public void txtPasswordOnAction(KeyEvent keyEvent) {
         if(loginContoller.cheakUserNameAndPassword(txtUserName.getText(),txtPassword.getText())) {
-            try {
-                mainDashBoard.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/home_page.fxml"))));
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-            mainDashBoard.show();
+            SceneManager.switchPage("/view/home_page.fxml");
 
-        }else {
-            lblError.setText("Invalid Username or Password!");
         }
     }
 }

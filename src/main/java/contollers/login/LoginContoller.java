@@ -1,10 +1,11 @@
 package contollers.login;
 
-import contollers.db.DBConnection;
+import db.DBConnection;
 
 import java.sql.*;
 
 public class LoginContoller {
+
 //    public static boolean cheakUserNameAndPassword(String UserName, String Password) {
 //        if (UserName.equals("saman") && Password.equals("saman12")){
 //            return true;

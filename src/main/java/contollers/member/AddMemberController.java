@@ -1,6 +1,6 @@
 package contollers.member;
 
-import contollers.db.DBConnection;
+import db.DBConnection;
 
 import java.sql.*;
 

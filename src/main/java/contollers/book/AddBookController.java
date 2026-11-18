@@ -1,6 +1,6 @@
 package contollers.book;
 
-import contollers.db.DBConnection;
+import db.DBConnection;
 
 import java.sql.*;
 

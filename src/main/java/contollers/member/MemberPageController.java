@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import scene.SceneManager;
 
 import java.io.IOException;
 
@@ -34,25 +35,29 @@ public class MemberPageController {
 
     @FXML
     void btnAddBookOnAction(ActionEvent event) {
-        Stage stage = new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/book_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
+//        Stage stage = new Stage();
+//        try {
+//            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/book_page.fxml"))));
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+//        stage.show();
+
+        SceneManager.switchPage("/view/book_page.fxml");
 
     }
 
     @FXML
     void btnAddMemberClickOnAction(ActionEvent event) {
-        Stage stage = new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/add_member.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
+//        Stage stage = new Stage();
+//        try {
+//            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/add_member.fxml"))));
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+//        stage.show();
+
+        SceneManager.switchPage("/view/add_member.fxml");
 
     }
 
@@ -63,13 +68,15 @@ public class MemberPageController {
 
     @FXML
     void btnDashBoardOnAction(ActionEvent event) {
-        Stage stage=new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/home_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
+//        Stage stage=new Stage();
+//        try {
+//            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/home_page.fxml"))));
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+//        stage.show();
+
+        SceneManager.switchPage("/view/home_page.fxml");
 
 
     }
