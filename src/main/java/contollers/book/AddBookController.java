@@ -1,6 +1,8 @@
 package contollers.book;
 
 import db.DBConnection;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 import java.sql.*;
 
@@ -19,6 +21,24 @@ public class AddBookController {
 
 
     Connection connection = DBConnection.getInstance().getConnection();
+
+    public ObservableList<String> getCategoty(){
+        ObservableList<String> categoryList = FXCollections.observableArrayList();
+        String sql = "SELECT category_id FROM categories ORDER BY category_id ASC";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                categoryList.add(resultSet.getString("category_name"));
+            }
+        } catch (SQLException e) {
+            System.err.println("Could not load batches from DB: " + e.getMessage());
+        }
+        if (categoryList.isEmpty()){
+            categoryList.addAll("Horror","Fantasy","Science Fiction","Romance","Educational");
+        }
+        return categoryList;
+    }
 
     public void addSBook(int bookId, String category, String bookTitel, int quantity, String author, String Year){
         String Sql = "INSERT INTO books(book_id,book_titel,author,category,published_year,quantity) " +

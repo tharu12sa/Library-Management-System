@@ -45,12 +45,17 @@ public class AddBookPageController implements Initializable {
 
     }
 
-    ObservableList<String> category= FXCollections.observableArrayList("Horror","Fantasy","Science Fiction","Romance","Educational");
-    public void setCmbCategory(){
+//    ObservableList<String> category= FXCollections.observableArrayList("Horror","Fantasy","Science Fiction","Romance","Educational");
+//    public void setCmbCategory(){
+//        cmbCategory.setItems(category);
+//    }
+
+public void loadCategory(){
+        ObservableList<String> category = addBookController.getCategoty();
         cmbCategory.setItems(category);
-    }
+}
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        setCmbCategory();
+        loadCategory();
     }
 }
