@@ -1,0 +1,92 @@
+package contollers.home;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.stage.Stage;
+import scene.SceneManager;
+
+import java.io.IOException;
+
+public class HomePageContoller {
+
+    //Stage addBookStage = new Stage();
+
+    @FXML
+    private Button btnAddBook;
+
+    @FXML
+    private Button btnAddMembers;
+
+    @FXML
+    private Button btnDashBoard;
+
+    @FXML
+    private Button btnHistory;
+
+    @FXML
+    private Button btnIssuseBook;
+
+    @FXML
+    private Button btnReturnBook;
+
+    @FXML
+    void btnAddBookOnAction(ActionEvent event) {
+
+//        try {
+//            addBookStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/book_page.fxml"))));
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+//        addBookStage.show();
+        SceneManager.switchPage("/view/book_page.fxml");
+
+    }
+
+    @FXML
+    void btnAddMembersOnAction(ActionEvent event) {
+//        Stage stage = new Stage();
+//        try {
+//            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/member_page.fxml"))));
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+//        stage.show();
+
+        SceneManager.switchPage("/view/member_page.fxml");
+    }
+
+    @FXML
+    void btnDashBoardOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnHistoryOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnIssuseBookOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnReturnBookOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    public void btnViewOnAction(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void btnIssuseOnAction(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void btnReturnOnAction(ActionEvent actionEvent) {
+    }
+}
