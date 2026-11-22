@@ -2,16 +2,12 @@ package contollers.login;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import scene.SceneManager;
-
-import java.io.IOException;
 
 public class LoginPageContoller {
 
@@ -46,14 +42,14 @@ public class LoginPageContoller {
 
        if(loginContoller.cheakUserNameAndPassword(txtUserName.getText(),txtPassword.getText())) {
 
-           SceneManager.switchPage("/view/home_page.fxml");
+           SceneManager.switchPage("/view/dashBoard_page.fxml");
        }
     }
 
     @FXML
     public void txtPasswordOnAction(KeyEvent keyEvent) {
         if(loginContoller.cheakUserNameAndPassword(txtUserName.getText(),txtPassword.getText())) {
-            SceneManager.switchPage("/view/home_page.fxml");
+            SceneManager.switchPage("/view/dashBoard_page.fxml");
 
         }
     }
