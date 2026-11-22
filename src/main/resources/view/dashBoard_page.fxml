@@ -12,7 +12,7 @@
 
 <AnchorPane prefHeight="680.0" prefWidth="906.0" styleClass="root" stylesheets="@../css/main-ui.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="contollers.dashBoard.DashBoardPageContoller">
    <children>
-      <VBox layoutY="36.0" prefHeight="645.0" prefWidth="202.0" style="-fx-border-color: #1123;" styleClass="sidebar">
+      <VBox layoutY="36.0" prefHeight="645.0" prefWidth="202.0" styleClass="sidebar">
          <children>
             <Button fx:id="btnDashBoard" alignment="CENTER" mnemonicParsing="false" onAction="#btnDashBoardOnAction" prefHeight="38.0" prefWidth="202.0" styleClass="nav-button-active" text="DashBoard">
                <VBox.margin>
