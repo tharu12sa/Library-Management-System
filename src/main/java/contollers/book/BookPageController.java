@@ -2,13 +2,8 @@ package contollers.book;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.stage.Stage;
 import scene.SceneManager;
-
-import java.io.IOException;
 
 public class BookPageController {
 
@@ -69,13 +64,13 @@ public class BookPageController {
     void btnDashBoardOnAction(ActionEvent event) {
 //        Stage stage=new Stage();
 //        try {
-//            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/home_page.fxml"))));
+//            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/dashBoard_page.fxml"))));
 //        } catch (IOException e) {
 //            throw new RuntimeException(e);
 //        }
 //        stage.show();
 
-        SceneManager.switchPage("/view/home_page.fxml");
+        SceneManager.switchPage("/view/dashBoard_page.fxml");
 
     }
 
