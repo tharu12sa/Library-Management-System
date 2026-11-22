@@ -1,16 +1,11 @@
-package contollers.home;
+package contollers.dashBoard;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.stage.Stage;
 import scene.SceneManager;
 
-import java.io.IOException;
-
-public class HomePageContoller {
+public class DashBoardPageContoller {
 
     //Stage addBookStage = new Stage();
 
