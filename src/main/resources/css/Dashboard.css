@@ -1,0 +1,83 @@
+/* Main Root & Background */
+.root {
+    -fx-font-family: "Segoe UI", "Inter", "Arial", sans-serif;
+    -fx-background-color: #f4f7fb;
+}
+
+/* Left Sidebar */
+.sidebar {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e2e8f0;
+    -fx-border-width: 0 1 0 0;
+    -fx-padding: 20 14 20 14;
+    -fx-spacing: 10;
+}
+
+/* Sidebar Navigation Buttons */
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #475569;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 12 16 12 16;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+}
+
+.nav-button:hover {
+    -fx-background-color: #eef2ff;
+    -fx-text-fill: #2563eb;
+}
+
+/* Active Selected Button (e.g., DashBoard) */
+.nav-button-active {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 12 16 12 16;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(37, 99, 235, 0.25), 10, 0, 0, 4);
+}
+
+/* Header Title & Subtitle */
+.title-label {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0f172a;
+}
+
+.subtitle-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #64748b;
+}
+
+/* Dashboard Stat Cards */
+.stat-card {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 14;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 14;
+    -fx-border-width: 1;
+    -fx-padding: 18;
+    -fx-effect: dropshadow(gaussian, rgba(15, 23, 42, 0.06), 12, 0, 0, 4);
+}
+
+.stat-card:hover {
+    -fx-border-color: #93c5fd;
+    -fx-effect: dropshadow(gaussian, rgba(37, 99, 235, 0.14), 16, 0, 0, 6);
+}
+
+.stat-title {
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #334155;
+}
+
+.stat-value {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0f172a;
+}

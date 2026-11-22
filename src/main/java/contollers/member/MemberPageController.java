@@ -3,14 +3,17 @@ package contollers.member;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import scene.SceneManager;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class MemberPageController {
+public class MemberPageController implements Initializable {
 
     @FXML
     private Button btnAddBook;
@@ -99,5 +102,32 @@ public class MemberPageController {
 
     @FXML
     public void btnIssueBookOnAction(ActionEvent actionEvent) {
+    }
+
+    private void setActiveButton(Button activeBtn) {
+        Button[] allButtons = {
+                btnDashBoard, btnAddBook, btnAddMembers,
+                btnIssuseBook, btnReturnBook, btnHistory
+        };
+
+        for (Button btn : allButtons) {
+            if (btn != null) {
+                btn.getStyleClass().remove("nav-button-active");
+                if (!btn.getStyleClass().contains("nav-button")) {
+                    btn.getStyleClass().add("nav-button");
+                }
+            }
+        }
+
+        if (activeBtn != null) {
+            activeBtn.getStyleClass().remove("nav-button");
+            activeBtn.getStyleClass().add("nav-button-active");
+        }
+    }
+
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        setActiveButton(btnAddMembers);
     }
 }
