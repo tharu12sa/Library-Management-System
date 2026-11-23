@@ -2,10 +2,14 @@ package contollers.dashBoard;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import scene.SceneManager;
 
-public class DashBoardPageContoller {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class DashBoardPageContoller implements Initializable {
 
     //Stage addBookStage = new Stage();
 
@@ -26,6 +30,15 @@ public class DashBoardPageContoller {
 
     @FXML
     private Button btnReturnBook;
+
+    @FXML
+    private Button btnQuickAddBook;
+
+    @FXML
+    private Button btnQuickAddMember;
+
+    @FXML
+    private Button btnQuickViewAllBook;
 
     @FXML
     void btnAddBookOnAction(ActionEvent event) {
@@ -83,5 +96,45 @@ public class DashBoardPageContoller {
 
     @FXML
     public void btnReturnOnAction(ActionEvent actionEvent) {
+    }
+
+    public void btnQABOOKOnAction(ActionEvent actionEvent) {
+        SceneManager.switchPage("/view/book_page.fxml");
+    }
+
+    public void btnQAViewOnActoin(ActionEvent actionEvent) {
+
+    }
+
+    public void btnQAMemberOnActoin(ActionEvent actionEvent) {
+        SceneManager.switchPage("/view/member_page.fxml");
+    }
+
+    private void setupQuickActionHoverEffect() {
+        Button[] quickButtons = {btnQuickAddBook, btnQuickAddMember, btnQuickViewAllBook};
+
+        for (Button hoveredBtn : quickButtons) {
+            if (hoveredBtn == null) continue;
+
+            hoveredBtn.hoverProperty().addListener((obs, wasHovered, isNowHovered) -> {
+                for (Button otherBtn : quickButtons) {
+                    if (otherBtn == null || otherBtn == hoveredBtn) continue;
+
+                    if (isNowHovered) {
+                        if (!otherBtn.getStyleClass().contains("quick-btn-green-highlight")) {
+                            otherBtn.getStyleClass().add("quick-btn-green-highlight");
+                        }
+                    } else {
+                        otherBtn.getStyleClass().remove("quick-btn-green-highlight");
+                    }
+                }
+            });
+        }
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+       // setActiveButton(btnDashBoard);
+        setupQuickActionHoverEffect();
     }
 }

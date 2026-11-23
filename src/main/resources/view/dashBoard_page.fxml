@@ -12,7 +12,7 @@
 
 <AnchorPane prefHeight="680.0" prefWidth="906.0" styleClass="root" stylesheets="@../css/main-ui.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="contollers.dashBoard.DashBoardPageContoller">
    <children>
-      <VBox layoutY="36.0" prefHeight="645.0" prefWidth="202.0" style="-fx-border-color: #1123;" styleClass="sidebar">
+      <VBox layoutY="36.0" prefHeight="645.0" prefWidth="202.0" styleClass="sidebar">
          <children>
             <Button fx:id="btnDashBoard" alignment="CENTER" mnemonicParsing="false" onAction="#btnDashBoardOnAction" prefHeight="38.0" prefWidth="202.0" styleClass="nav-button-active" text="DashBoard">
                <VBox.margin>
@@ -65,7 +65,7 @@
             <Label layoutX="125.0" layoutY="50.0" prefHeight="18.0" prefWidth="272.0" styleClass="subtitle-label" text="Welcom Library Management System" />
             <Pane layoutX="334.0" layoutY="141.0" prefHeight="137.0" prefWidth="185.0" style="-fx-border-color: #1123;" styleClass="stat-card">
                <children>
-                  <Label layoutX="41.0" layoutY="14.0" prefHeight="17.0" prefWidth="93.0" text="Total Members">
+                  <Label layoutX="41.0" layoutY="14.0" prefHeight="17.0" prefWidth="93.0" styleClass="stat-title" text="Total Members">
                      <font>
                         <Font name="Book Antiqua Bold" size="12.0" />
                      </font>
@@ -78,12 +78,12 @@
                </children></Pane>
             <Pane layoutX="61.0" layoutY="306.0" prefHeight="137.0" prefWidth="185.0" style="-fx-border-color: #1123;" styleClass="stat-card">
                <children>
-                  <Label layoutX="53.0" layoutY="14.0" prefHeight="18.0" prefWidth="55.0" text="Currently">
+                  <Label layoutX="53.0" layoutY="14.0" prefHeight="18.0" prefWidth="93.0" styleClass="stat-title" text="Currently">
                      <font>
                         <Font name="Book Antiqua Bold" size="12.0" />
                      </font>
                   </Label>
-                  <Label layoutX="53.0" layoutY="32.0" prefHeight="17.0" prefWidth="63.0" text="Borrowed">
+                  <Label layoutX="53.0" layoutY="32.0" prefHeight="17.0" prefWidth="63.0" styleClass="stat-title" text="Borrowed">
                      <font>
                         <Font name="Book Antiqua Bold" size="12.0" />
                      </font></Label>
@@ -96,7 +96,7 @@
             </Pane>
             <Pane layoutX="340.0" layoutY="306.0" prefHeight="137.0" prefWidth="185.0" style="-fx-border-color: #1123;" styleClass="stat-card">
                <children>
-                  <Label layoutX="53.0" layoutY="14.0" prefHeight="17.0" prefWidth="81.0" text="Overdue Book">
+                  <Label layoutX="53.0" layoutY="14.0" prefHeight="18.0" prefWidth="93.0" styleClass="stat-title" text="Overdue Book">
                      <font>
                         <Font name="Book Antiqua Bold" size="12.0" />
                      </font>
@@ -110,7 +110,7 @@
             </Pane>
             <Pane layoutX="61.0" layoutY="141.0" prefHeight="137.0" prefWidth="185.0" style="-fx-border-color: #1123;" styleClass="stat-card">
                <children>
-                  <Label layoutX="53.0" layoutY="14.0" prefHeight="17.0" prefWidth="81.0" text="Total Books">
+                  <Label layoutX="53.0" layoutY="14.0" prefHeight="17.0" prefWidth="81.0" styleClass="stat-title" text="Total Books">
                      <font>
                         <Font name="Book Antiqua Bold" size="12.0" />
                      </font>
@@ -122,7 +122,13 @@
                   </ImageView>
                </children>
             </Pane>
-            <AnchorPane layoutX="18.0" layoutY="494.0" prefHeight="141.0" prefWidth="644.0" />
+            <AnchorPane layoutX="18.0" layoutY="494.0" prefHeight="141.0" prefWidth="644.0" styleClass="quick-action-card" stylesheets="@../css/dashboard.css">
+               <children>
+                  <Label layoutX="38.0" layoutY="14.0" prefHeight="15.0" prefWidth="109.0" styleClass="quick-action-title" text="Quick Action" />
+                  <Button fx:id="btnQuickAddBook" layoutX="38.0" layoutY="46.0" mnemonicParsing="false" onAction="#btnQABOOKOnAction" prefHeight="23.0" prefWidth="150.0" styleClass="quick-btn-secondary" text="Add Book" />
+                  <Button fx:id="btnQuickViewAllBook" layoutX="452.0" layoutY="46.0" mnemonicParsing="false" onAction="#btnQAViewOnActoin" prefHeight="23.0" prefWidth="150.0" styleClass="quick-btn-secondary" text="View All Book" />
+                  <Button fx:id="btnQuickAddMember" layoutX="240.0" layoutY="46.0" mnemonicParsing="false" onAction="#btnQAMemberOnActoin" prefHeight="23.0" prefWidth="150.0" styleClass="quick-btn-secondary" text="Add Members" />
+               </children></AnchorPane>
          </children></AnchorPane>
    </children>
 </AnchorPane>
