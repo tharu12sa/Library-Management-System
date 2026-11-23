@@ -3,6 +3,9 @@ package contollers.book;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TextField;
 import scene.SceneManager;
 
 public class BookPageController {
@@ -27,6 +30,24 @@ public class BookPageController {
 
     @FXML
     private Button btnReturnBook;
+
+    @FXML
+    private TextField addAuthor;
+
+    @FXML
+    private TextField addBookID;
+
+    @FXML
+    private TextField addBookTitle;
+
+    @FXML
+    private ComboBox<?> addCategory;
+
+    @FXML
+    private DatePicker addYear;
+
+    @FXML
+    private TextField addquantity;
 
     @FXML
     void btnAddBookOnAction(ActionEvent event) {
@@ -95,5 +116,8 @@ public class BookPageController {
 
     @FXML
     public void btnIssueBookOnAction(ActionEvent actionEvent) {
+    }
+
+    public void addBookOnAction(ActionEvent actionEvent) {
     }
 }
