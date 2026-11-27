@@ -1,14 +1,19 @@
 package contollers.book;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextField;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
 import scene.SceneManager;
 
-public class BookPageController {
+import java.net.URL;
+import java.time.LocalDate;
+import java.util.ResourceBundle;
+
+public class BookPageController implements Initializable {
+
+    AddBookController addBookController = new AddBookController();
 
     @FXML
     private Button btnAddBook;
@@ -41,7 +46,7 @@ public class BookPageController {
     private TextField addBookTitle;
 
     @FXML
-    private ComboBox<?> addCategory;
+    private ComboBox<String> addCategory;
 
     @FXML
     private DatePicker addYear;
@@ -68,18 +73,7 @@ public class BookPageController {
 
     }
 
-    @FXML
-    void btnClickOnAction(ActionEvent event) {
-//        Stage stage = new Stage();
-//        try {
-//            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/add_book.fxml"))));
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
-//        stage.show();
-        SceneManager.switchPage("/view/add_book.fxml");
 
-    }
 
     @FXML
     void btnDashBoardOnAction(ActionEvent event) {
@@ -118,6 +112,75 @@ public class BookPageController {
     public void btnIssueBookOnAction(ActionEvent actionEvent) {
     }
 
-    public void addBookOnAction(ActionEvent actionEvent) {
+    @FXML
+    public void btnBookIDGenerateOnAction(ActionEvent actionEvent) {
+        String category = addCategory.getValue();
+
+        if (category == null || category.trim().isEmpty()){
+            new Alert(Alert.AlertType.WARNING, "Please select category to generate Student ID!").show();
+            return;
+        }
+        try {
+            String bookID = addBookController.generateBookID(category);
+            addBookID.setText(bookID);
+        }catch (Exception e){
+            new Alert(Alert.AlertType.ERROR, "Failed to generate Book ID: " + e.getMessage()).show();
+        }
     }
+
+    public void addBookOnAction(ActionEvent actionEvent) {
+        String bookID= addBookID.getText();
+        String bookTitle = addBookTitle.getText();
+        String author = addAuthor.getText();
+        String category = addCategory.getValue();
+        LocalDate year = addYear.getValue();
+        String quantity = addquantity.getText();
+
+        if (bookTitle == null || bookTitle.trim().isEmpty() ||
+                author == null || author.trim().isEmpty() ||
+                category == null || category.trim().isEmpty() ||
+                year == null || quantity == null || quantity.trim().isEmpty()){
+            new Alert(Alert.AlertType.WARNING, "Please fill in all required fields!").show();
+            return;
+        }
+
+        if (bookID == null || bookID.trim().isEmpty()) {
+            bookID = addBookController.generateBookID(category);
+            addBookID.setText(bookID);
+        }
+
+        try {
+            boolean isAdded = addBookController.addBook(
+                    bookID.trim(),
+                    bookTitle.trim(),
+                    author.trim(),
+                    category.trim(),
+                    year.toString(),
+                    quantity.trim()
+                    );
+
+            if (isAdded) {
+                new Alert(Alert.AlertType.INFORMATION, "Book Added Successfully!\nBook ID: " + bookID).show();
+                //clearFields();
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Failed to Add Book!").show();
+            }
+        }catch (Exception e) {
+            new Alert(Alert.AlertType.ERROR, "Error: " + e.getMessage()).show();
+        }
+       //addBookController.addBook(addBookID.getText(),addBookTitle.getText(),addAuthor.getText(),addCategory.getValue(), String.valueOf(addYear.getValue()),addquantity.getText());
+    }
+
+    public void loadCategory(){
+        ObservableList<String> category = addBookController.getCategory();
+        addCategory.setItems(category);
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        loadCategory();
+
+    }
+
+
 }

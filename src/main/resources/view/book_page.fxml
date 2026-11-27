@@ -60,19 +60,21 @@
          <children>
             <Pane layoutX="56.0" layoutY="89.0" prefHeight="473.0" prefWidth="590.0">
                <children>
-                  <TextField fx:id="addBookID" layoutX="36.0" layoutY="48.0" prefHeight="23.0" prefWidth="184.0" />
-                  <Label layoutX="36.0" layoutY="25.0" prefHeight="15.0" prefWidth="184.0" text="Book Id  *            " />
-                  <Label layoutX="341.0" layoutY="25.0" prefHeight="15.0" prefWidth="184.0" text="Book Title  *" />
-                  <TextField fx:id="addBookTitle" layoutX="341.0" layoutY="48.0" prefHeight="23.0" prefWidth="184.0" />
+                  <TextField fx:id="addBookID" layoutX="36.0" layoutY="272.0" prefHeight="23.0" prefWidth="184.0" />
+                  <Label layoutX="36.0" layoutY="250.0" prefHeight="15.0" prefWidth="184.0" text="Book Id  *            " />
+                  <Label layoutX="36.0" layoutY="23.0" prefHeight="15.0" prefWidth="184.0" text="Book Title  *" />
+                  <TextField fx:id="addBookTitle" layoutX="36.0" layoutY="64.0" prefHeight="23.0" prefWidth="184.0" />
                   <Label layoutX="36.0" layoutY="101.0" prefHeight="15.0" prefWidth="184.0" text="Author  *        " />
                   <TextField fx:id="addAuthor" layoutX="36.0" layoutY="125.0" prefHeight="23.0" prefWidth="184.0" />
-                  <Label layoutX="341.0" layoutY="101.0" prefHeight="15.0" prefWidth="184.0" text="Category  *" />
-                  <ComboBox fx:id="addCategory" layoutX="341.0" layoutY="125.0" prefHeight="23.0" prefWidth="184.0" />
+                  <Label layoutX="348.0" layoutY="31.0" prefHeight="15.0" prefWidth="184.0" text="Category  *" />
+                  <ComboBox fx:id="addCategory" layoutX="336.0" layoutY="64.0" prefHeight="23.0" prefWidth="184.0" />
                   <Label layoutX="36.0" layoutY="178.0" prefHeight="15.0" prefWidth="184.0" text=" Published Year  *" />
                   <DatePicker fx:id="addYear" layoutX="36.0" layoutY="199.0" prefHeight="23.0" prefWidth="184.0" />
-                  <Label layoutX="341.0" layoutY="178.0" prefHeight="15.0" prefWidth="184.0" text="Quantity  *" />
-                  <TextField fx:id="addquantity" layoutX="341.0" layoutY="199.0" prefHeight="23.0" prefWidth="184.0" />
+                  <Label layoutX="336.0" layoutY="101.0" prefHeight="15.0" prefWidth="184.0" text="Quantity  *" />
+                  <TextField fx:id="addquantity" layoutX="336.0" layoutY="125.0" prefHeight="23.0" prefWidth="184.0" />
                   <Button layoutX="428.0" layoutY="358.0" mnemonicParsing="false" onAction="#addBookOnAction" prefHeight="30.0" prefWidth="92.0" text="Save book" />
+                  <Label layoutX="336.0" layoutY="178.0" prefHeight="15.0" prefWidth="184.0" text="Book Id Generate" />
+                  <Button layoutX="336.0" layoutY="198.0" mnemonicParsing="false" onAction="#btnBookIDGenerateOnAction" prefHeight="9.0" prefWidth="184.0" text="Generate" />
                </children>
             </Pane>
          </children>
