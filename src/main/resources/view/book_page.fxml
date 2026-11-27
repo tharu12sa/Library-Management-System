@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
@@ -11,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="680.0" prefWidth="906.0" styleClass="root" stylesheets="@../css/main-ui.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="contollers.book.BookPageController">
+<AnchorPane prefHeight="680.0" prefWidth="906.0" styleClass="form-root" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="contollers.book.BookPageController">
     <children>
         <VBox layoutY="36.0" prefHeight="645.0" prefWidth="202.0" style="-fx-border-color: #1123;" styleClass="sidebar">
             <children>
@@ -51,33 +52,37 @@
                </VBox.margin>
             </Button>
             </children></VBox>
-      <Label alignment="CENTER" layoutX="386.0" layoutY="14.0" prefHeight="30.0" prefWidth="222.0" text="Book Page">
+      <Label alignment="CENTER" layoutX="386.0" layoutY="14.0" prefHeight="30.0" prefWidth="222.0" styleClass="form-title" text="Book Page">
          <font>
             <Font name="Bookman Old Style Bold" size="12.0" />
          </font>
       </Label>
       <AnchorPane layoutX="204.0" layoutY="77.0" prefHeight="605.0" prefWidth="701.0">
          <children>
-            <Pane layoutX="56.0" layoutY="89.0" prefHeight="473.0" prefWidth="590.0">
+            <Pane layoutX="56.0" layoutY="89.0" prefHeight="473.0" prefWidth="590.0" styleClass="form-card">
                <children>
-                  <TextField fx:id="addBookID" layoutX="36.0" layoutY="272.0" prefHeight="23.0" prefWidth="184.0" />
-                  <Label layoutX="36.0" layoutY="250.0" prefHeight="15.0" prefWidth="184.0" text="Book Id  *            " />
-                  <Label layoutX="36.0" layoutY="23.0" prefHeight="15.0" prefWidth="184.0" text="Book Title  *" />
-                  <TextField fx:id="addBookTitle" layoutX="36.0" layoutY="64.0" prefHeight="23.0" prefWidth="184.0" />
-                  <Label layoutX="36.0" layoutY="101.0" prefHeight="15.0" prefWidth="184.0" text="Author  *        " />
-                  <TextField fx:id="addAuthor" layoutX="36.0" layoutY="125.0" prefHeight="23.0" prefWidth="184.0" />
-                  <Label layoutX="348.0" layoutY="31.0" prefHeight="15.0" prefWidth="184.0" text="Category  *" />
-                  <ComboBox fx:id="addCategory" layoutX="336.0" layoutY="64.0" prefHeight="23.0" prefWidth="184.0" />
-                  <Label layoutX="36.0" layoutY="178.0" prefHeight="15.0" prefWidth="184.0" text=" Published Year  *" />
-                  <DatePicker fx:id="addYear" layoutX="36.0" layoutY="199.0" prefHeight="23.0" prefWidth="184.0" />
-                  <Label layoutX="336.0" layoutY="101.0" prefHeight="15.0" prefWidth="184.0" text="Quantity  *" />
-                  <TextField fx:id="addquantity" layoutX="336.0" layoutY="125.0" prefHeight="23.0" prefWidth="184.0" />
-                  <Button layoutX="428.0" layoutY="358.0" mnemonicParsing="false" onAction="#addBookOnAction" prefHeight="30.0" prefWidth="92.0" text="Save book" />
-                  <Label layoutX="336.0" layoutY="178.0" prefHeight="15.0" prefWidth="184.0" text="Book Id Generate" />
-                  <Button layoutX="336.0" layoutY="198.0" mnemonicParsing="false" onAction="#btnBookIDGenerateOnAction" prefHeight="9.0" prefWidth="184.0" text="Generate" />
+                  <TextField fx:id="addBookID" layoutX="36.0" layoutY="272.0" prefHeight="23.0" prefWidth="184.0" styleClass="modern-input" />
+                  <Label layoutX="36.0" layoutY="250.0" prefHeight="15.0" prefWidth="184.0" styleClass="field-label" text="Book Id  *            " />
+                  <Label layoutX="36.0" layoutY="23.0" prefHeight="15.0" prefWidth="184.0" styleClass="field-label" text="Book Title  *" />
+                  <TextField fx:id="addBookTitle" layoutX="36.0" layoutY="64.0" prefHeight="23.0" prefWidth="184.0" styleClass="modern-input" />
+                  <Label layoutX="36.0" layoutY="101.0" prefHeight="15.0" prefWidth="184.0" styleClass="field-label" text="Author  *        " />
+                  <TextField fx:id="addAuthor" layoutX="36.0" layoutY="125.0" prefHeight="23.0" prefWidth="184.0" styleClass="modern-input" />
+                  <Label layoutX="348.0" layoutY="31.0" prefHeight="15.0" prefWidth="184.0" styleClass="field-label" text="Category  *" />
+                  <ComboBox fx:id="addCategory" layoutX="336.0" layoutY="64.0" prefHeight="23.0" prefWidth="184.0" styleClass="modern-date-picker" />
+                  <Label layoutX="36.0" layoutY="178.0" prefHeight="15.0" prefWidth="184.0" styleClass="field-label" text=" Published Year  *" />
+                  <DatePicker fx:id="addYear" layoutX="36.0" layoutY="199.0" prefHeight="23.0" prefWidth="184.0" styleClass="modern-date-picker" />
+                  <Label layoutX="336.0" layoutY="101.0" prefHeight="15.0" prefWidth="184.0" styleClass="field-label" text="Quantity  *" />
+                  <TextField fx:id="addquantity" layoutX="336.0" layoutY="125.0" prefHeight="23.0" prefWidth="184.0" styleClass="modern-input" />
+                  <Button layoutX="396.0" layoutY="358.0" mnemonicParsing="false" onAction="#addBookOnAction" prefHeight="39.0" prefWidth="124.0" styleClass="btn-save" text="Save book" />
+                  <Label layoutX="336.0" layoutY="178.0" prefHeight="15.0" prefWidth="184.0" styleClass="field-label" text="Book Id Generate" />
+                  <Button layoutX="336.0" layoutY="198.0" mnemonicParsing="false" onAction="#btnBookIDGenerateOnAction" prefHeight="9.0" prefWidth="184.0" styleClass="btn-generate" text="Generate" />
                </children>
             </Pane>
          </children>
       </AnchorPane>
     </children>
+   <stylesheets>
+      <URL value="@../css/main-ui.css" />
+      <URL value="@../css/bookPage.css" />
+   </stylesheets>
 </AnchorPane>

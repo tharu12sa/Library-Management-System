@@ -1,0 +1,110 @@
+/* Form Root Background */
+.form-root {
+    -fx-background-color: #f8fafc;
+}
+
+/* Main White Card Container (Form fields ටික ඇතුළේ තියෙන card එක) */
+.form-card {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 16;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 16;
+    -fx-border-width: 1;
+    -fx-padding: 24 28 24 28;
+    -fx-effect: dropshadow(gaussian, rgba(15, 23, 42, 0.06), 14, 0, 0, 4);
+}
+
+/* Form Page Title ("Add New Book" / "Book Page") */
+.form-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0f172a;
+}
+
+/* Field Labels (Book Title *, Author *, Category *, etc.) */
+.field-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #334155;
+}
+
+/* Modern TextField & ComboBox */
+.modern-input {
+    -fx-background-color: #f8fafc;
+    -fx-background-radius: 9;
+    -fx-border-color: #cbd5e1;
+    -fx-border-radius: 9;
+    -fx-border-width: 1;
+    -fx-padding: 8 12 8 12;
+    -fx-font-size: 13px;
+    -fx-text-fill: #0f172a;
+    -fx-prompt-text-fill: #94a3b8;
+}
+
+.modern-input:focused {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #2563eb;
+    -fx-border-width: 1.5;
+    -fx-effect: dropshadow(gaussian, rgba(37, 99, 235, 0.14), 8, 0, 0, 0);
+}
+
+/* DatePicker Styling */
+.modern-date-picker {
+    -fx-background-color: #f8fafc;
+    -fx-background-radius: 9;
+    -fx-border-color: #cbd5e1;
+    -fx-border-radius: 9;
+    -fx-border-width: 1;
+    -fx-font-size: 13px;
+}
+
+.modern-date-picker:focused {
+    -fx-border-color: #2563eb;
+    -fx-border-width: 1.5;
+}
+
+.modern-date-picker > .text-field {
+    -fx-background-color: transparent;
+    -fx-padding: 8 12 8 12;
+    -fx-text-fill: #0f172a;
+}
+
+.modern-date-picker > .arrow-button {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+/* Generate Button (Soft Blue/Indigo Secondary Action) */
+.btn-generate {
+    -fx-background-color: #eff6ff;
+    -fx-text-fill: #2563eb;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 9;
+    -fx-border-color: #93c5fd;
+    -fx-border-radius: 9;
+    -fx-border-width: 1;
+    -fx-padding: 9 16 9 16;
+    -fx-cursor: hand;
+}
+
+.btn-generate:hover {
+    -fx-background-color: #dbeafe;
+    -fx-border-color: #2563eb;
+}
+
+/* Save Book Button (Primary Green Action) */
+.btn-save {
+    -fx-background-color: #16a34a;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-padding: 10 24 10 24;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(22, 163, 74, 0.25), 10, 0, 0, 3);
+}
+
+.btn-save:hover {
+    -fx-background-color: #15803d;
+}
