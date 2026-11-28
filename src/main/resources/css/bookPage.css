@@ -108,3 +108,27 @@
 .btn-save:hover {
     -fx-background-color: #15803d;
 }
+
+/* Clear Form Button (Neutral Secondary Style) */
+.btn-clear {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #475569;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-border-color: #cbd5e1;
+    -fx-border-radius: 10;
+    -fx-border-width: 1;
+    -fx-padding: 10 20 10 20;
+    -fx-cursor: hand;
+}
+
+.btn-clear:hover {
+    -fx-background-color: #f1f5f9;
+    -fx-border-color: #94a3b8;
+    -fx-text-fill: #0f172a;
+}
+
+.btn-clear:pressed {
+    -fx-background-color: #e2e8f0;
+}

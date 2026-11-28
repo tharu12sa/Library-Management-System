@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="680.0" prefWidth="906.0" styleClass="form-root" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="contollers.book.BookPageController">
+<AnchorPane prefHeight="680.0" prefWidth="906.0" styleClass="root" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="contollers.book.BookPageController">
     <children>
         <VBox layoutY="36.0" prefHeight="645.0" prefWidth="202.0" style="-fx-border-color: #1123;" styleClass="sidebar">
             <children>
@@ -76,6 +76,7 @@
                   <Button layoutX="396.0" layoutY="358.0" mnemonicParsing="false" onAction="#addBookOnAction" prefHeight="39.0" prefWidth="124.0" styleClass="btn-save" text="Save book" />
                   <Label layoutX="336.0" layoutY="178.0" prefHeight="15.0" prefWidth="184.0" styleClass="field-label" text="Book Id Generate" />
                   <Button layoutX="336.0" layoutY="198.0" mnemonicParsing="false" onAction="#btnBookIDGenerateOnAction" prefHeight="9.0" prefWidth="184.0" styleClass="btn-generate" text="Generate" />
+                  <Button layoutX="205.0" layoutY="358.0" mnemonicParsing="false" onAction="#clearFromOnAction" prefHeight="39.0" prefWidth="117.0" styleClass="btn-clear" text="Clear Form" />
                </children>
             </Pane>
          </children>

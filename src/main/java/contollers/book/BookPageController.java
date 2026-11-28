@@ -128,6 +128,7 @@ public class BookPageController implements Initializable {
         }
     }
 
+    @FXML
     public void addBookOnAction(ActionEvent actionEvent) {
         String bookID= addBookID.getText();
         String bookTitle = addBookTitle.getText();
@@ -161,7 +162,7 @@ public class BookPageController implements Initializable {
 
             if (isAdded) {
                 new Alert(Alert.AlertType.INFORMATION, "Book Added Successfully!\nBook ID: " + bookID).show();
-                //clearFields();
+                clearFields();
             } else {
                 new Alert(Alert.AlertType.ERROR, "Failed to Add Book!").show();
             }
@@ -169,6 +170,20 @@ public class BookPageController implements Initializable {
             new Alert(Alert.AlertType.ERROR, "Error: " + e.getMessage()).show();
         }
        //addBookController.addBook(addBookID.getText(),addBookTitle.getText(),addAuthor.getText(),addCategory.getValue(), String.valueOf(addYear.getValue()),addquantity.getText());
+    }
+
+    @FXML
+    public void clearFromOnAction(ActionEvent actionEvent) {
+        clearFields();
+    }
+
+    private void clearFields() {
+        addBookID.clear();
+        addBookTitle.clear();
+        addAuthor.clear();
+        addYear.setValue(null);
+        addCategory.setValue(null);
+        addquantity.clear();
     }
 
     public void loadCategory(){
@@ -181,6 +196,7 @@ public class BookPageController implements Initializable {
         loadCategory();
 
     }
+
 
 
 }
