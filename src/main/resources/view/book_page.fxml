@@ -84,6 +84,6 @@
     </children>
    <stylesheets>
       <URL value="@../css/main-ui.css" />
-      <URL value="@../css/bookPage.css" />
+      <URL value="@../css/bookPage and memberPage.css" />
    </stylesheets>
 </AnchorPane>
