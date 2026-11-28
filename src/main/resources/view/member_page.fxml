@@ -11,41 +11,41 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="680.0" prefWidth="906.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="contollers.member.MemberPageController">
+<AnchorPane prefHeight="680.0" prefWidth="906.0" styleClass="root" stylesheets="@../css/main-ui.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="contollers.member.MemberPageController">
     <children>
-        <VBox layoutY="36.0" prefHeight="645.0" prefWidth="202.0" style="-fx-border-color: #1123;">
+        <VBox layoutY="36.0" prefHeight="645.0" prefWidth="202.0" styleClass="sidebar">
             <children>
-                <Button fx:id="btnDashBoard" alignment="CENTER" mnemonicParsing="false" onAction="#btnDashBoardOnAction" prefHeight="38.0" prefWidth="202.0" text="DashBoard">
+                <Button fx:id="btnDashBoard" alignment="CENTER" mnemonicParsing="false" onAction="#btnDashBoardOnAction" prefHeight="38.0" prefWidth="202.0" styleClass="nav-button" text="DashBoard">
                     <VBox.margin>
                         <Insets top="20.0" />
                     </VBox.margin>
                 </Button>
-                <Button fx:id="btnAddBook" alignment="CENTER" layoutX="10.0" layoutY="30.0" mnemonicParsing="false" onAction="#btnAddBookOnAction" prefHeight="38.0" prefWidth="202.0" text="Books">
+                <Button fx:id="btnAddBook" alignment="CENTER" layoutX="10.0" layoutY="30.0" mnemonicParsing="false" onAction="#btnAddBookOnAction" prefHeight="38.0" prefWidth="202.0" styleClass="nav-button" text="Books">
                     <VBox.margin>
                         <Insets top="10.0" />
                     </VBox.margin>
                 </Button>
-                <Button fx:id="btnAddMembers" alignment="CENTER" layoutX="10.0" layoutY="68.0" mnemonicParsing="false" onAction="#btnAddMembersOnAction" prefHeight="38.0" prefWidth="202.0" text="Members">
+                <Button fx:id="btnAddMembers" alignment="CENTER" layoutX="10.0" layoutY="68.0" mnemonicParsing="false" onAction="#btnAddMembersOnAction" prefHeight="38.0" prefWidth="202.0" styleClass="nav-button" text="Members">
                     <VBox.margin>
                         <Insets top="10.0" />
                     </VBox.margin>
                 </Button>
-                <Button fx:id="btnView" alignment="CENTER" layoutX="10.0" layoutY="107.0" mnemonicParsing="false" onAction="#btnViewOnAction" prefHeight="38.0" prefWidth="202.0" text="View">
+                <Button fx:id="btnView" alignment="CENTER" layoutX="10.0" layoutY="107.0" mnemonicParsing="false" onAction="#btnViewOnAction" prefHeight="38.0" prefWidth="202.0" styleClass="nav-button" text="View">
                     <VBox.margin>
                         <Insets top="10.0" />
                     </VBox.margin>
                 </Button>
-                <Button fx:id="btnIssueBook" alignment="CENTER" layoutX="10.0" layoutY="145.0" mnemonicParsing="false" onAction="#btnIssueBookOnAction" prefHeight="38.0" prefWidth="202.0" text="Issue Book">
+                <Button fx:id="btnIssueBook" alignment="CENTER" layoutX="10.0" layoutY="145.0" mnemonicParsing="false" onAction="#btnIssueBookOnAction" prefHeight="38.0" prefWidth="202.0" styleClass="nav-button" text="Issue Book">
                     <VBox.margin>
                         <Insets top="10.0" />
                     </VBox.margin>
                 </Button>
-                <Button fx:id="btnReturnBook" alignment="CENTER" layoutX="10.0" layoutY="184.0" mnemonicParsing="false" onAction="#btnReturnBookOnAction" prefHeight="38.0" prefWidth="202.0" text="Return Book">
+                <Button fx:id="btnReturnBook" alignment="CENTER" layoutX="10.0" layoutY="184.0" mnemonicParsing="false" onAction="#btnReturnBookOnAction" prefHeight="38.0" prefWidth="202.0" styleClass="nav-button" text="Return Book">
                     <VBox.margin>
                         <Insets top="10.0" />
                     </VBox.margin>
                 </Button>
-            <Button fx:id="btnHistory" alignment="CENTER" layoutX="11.0" layoutY="275.0" mnemonicParsing="false" onAction="#btnHistoryOnAction" prefHeight="38.0" prefWidth="202.0" text="History">
+            <Button fx:id="btnHistory" alignment="CENTER" layoutX="11.0" layoutY="275.0" mnemonicParsing="false" onAction="#btnHistoryOnAction" prefHeight="38.0" prefWidth="202.0" styleClass="nav-button" text="History">
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>
