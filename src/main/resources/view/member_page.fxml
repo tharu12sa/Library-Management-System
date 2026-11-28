@@ -57,7 +57,7 @@
                 <Font name="Bookman Old Style Bold" size="12.0" />
             </font>
         </Label>
-      <Pane layoutX="255.0" layoutY="101.0" prefHeight="487.0" prefWidth="597.0" styleClass="form-card">
+      <Pane layoutX="255.0" layoutY="101.0" prefHeight="487.0" prefWidth="597.0" styleClass="form-card" stylesheets="@../css/bookPage%20and%20memberPage.css">
          <children>
             <Label layoutX="45.0" layoutY="27.0" prefHeight="15.0" prefWidth="173.0" styleClass="field-label" text="Member Name  *" />
             <TextField fx:id="txtName" layoutX="45.0" layoutY="54.0" prefHeight="23.0" prefWidth="173.0" styleClass="modern-input" />
@@ -72,7 +72,7 @@
             <Label layoutX="45.0" layoutY="181.0" prefHeight="15.0" prefWidth="173.0" styleClass="field-label" text="Member ID" />
             <TextField fx:id="txtMemberID" layoutX="45.0" layoutY="213.0" prefHeight="23.0" prefWidth="173.0" styleClass="modern-input" />
             <Label layoutX="385.0" layoutY="181.0" prefHeight="15.0" prefWidth="173.0" styleClass="field-label" text="Generate Member ID" />
-            <Button fx:id="btnGenerateID" layoutX="385.0" layoutY="213.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="173.0" styleClass="btn-generate" text="Generate ID" />
+            <Button layoutX="385.0" layoutY="213.0" mnemonicParsing="false" onAction="#btnGenerateIDOnAction" prefHeight="23.0" prefWidth="173.0" styleClass="btn-generate" text="Generate ID" />
             <Button layoutX="408.0" layoutY="403.0" mnemonicParsing="false" onAction="#btnSaveMemberOnAction" prefHeight="39.0" prefWidth="150.0" styleClass="btn-save" text="Save Member" />
             <Button layoutX="39.0" layoutY="403.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="23.0" prefWidth="119.0" styleClass="btn-clear" text="Clear form" />
          </children>
@@ -80,6 +80,6 @@
     </children>
    <stylesheets>
       <URL value="@../css/main-ui.css" />
-      <URL value="@../css/bookPage%20and%20memberPage.css" />
+      <URL value="@../css/bookPage and memberPage.css" />
    </stylesheets>
 </AnchorPane>

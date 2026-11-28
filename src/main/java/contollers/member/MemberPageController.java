@@ -2,16 +2,15 @@ package contollers.member;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
+import javafx.scene.control.*;
 import scene.SceneManager;
 
 public class MemberPageController {
 
-    @FXML
-    private Button btnAddBook;
+    AddMemberController addMemberController = new AddMemberController();
 
     @FXML
-    private Button btnAddMemberClick;
+    private Button btnAddBook;
 
     @FXML
     private Button btnAddMembers;
@@ -23,56 +22,53 @@ public class MemberPageController {
     private Button btnHistory;
 
     @FXML
-    private Button btnIssuseBook;
+    private Button btnIssueBook;
 
     @FXML
     private Button btnReturnBook;
 
     @FXML
-    void btnAddBookOnAction(ActionEvent event) {
-//        Stage stage = new Stage();
-//        try {
-//            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/book_page.fxml"))));
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
-//        stage.show();
+    private Button btnView;
 
+    @FXML
+    private DatePicker dateBirth;
+
+    @FXML
+    private TextArea txtAddress;
+
+    @FXML
+    private TextField txtEmail;
+
+    @FXML
+    private TextField txtMemberID;
+
+    @FXML
+    private TextField txtNIC;
+
+    @FXML
+    private TextField txtName;
+
+    @FXML
+    void btnAddBookOnAction(ActionEvent event) {
         SceneManager.switchPage("/view/book_page.fxml");
 
     }
 
     @FXML
-    void btnAddMemberClickOnAction(ActionEvent event) {
-//        Stage stage = new Stage();
-//        try {
-//            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/add_member.fxml"))));
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
-//        stage.show();
-
-        SceneManager.switchPage("/view/add_member.fxml");
+    void btnAddMembersOnAction(ActionEvent event) {
+        SceneManager.switchPage("/view/member_page.fxml");
 
     }
 
     @FXML
-    void btnAddMembersOnAction(ActionEvent event) {
+    void btnClearOnAction(ActionEvent event) {
 
     }
 
     @FXML
     void btnDashBoardOnAction(ActionEvent event) {
-//        Stage stage=new Stage();
-//        try {
-//            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/dashBoard_page.fxml"))));
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
-//        stage.show();
 
         SceneManager.switchPage("/view/dashBoard_page.fxml");
-
 
     }
 
@@ -81,7 +77,10 @@ public class MemberPageController {
 
     }
 
+    @FXML
+    void btnIssueBookOnAction(ActionEvent event) {
 
+    }
 
     @FXML
     void btnReturnBookOnAction(ActionEvent event) {
@@ -89,10 +88,29 @@ public class MemberPageController {
     }
 
     @FXML
-    public void btnViewOnAction(ActionEvent actionEvent) {
+    void btnSaveMemberOnAction(ActionEvent event) {
+
     }
 
     @FXML
-    public void btnIssueBookOnAction(ActionEvent actionEvent) {
+    void btnViewOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    public void btnGenerateIDOnAction(ActionEvent actionEvent) {
+        String NIC = txtNIC.getText();
+
+        if (NIC == null || NIC.trim().isEmpty()){
+            new Alert(Alert.AlertType.WARNING, "Please add NIC Number!").show();
+            return;
+        }
+        try {
+            String memberID = addMemberController.generateMemberID(NIC);
+            txtMemberID.setText(memberID);
+        }catch (Exception e){
+            new Alert(Alert.AlertType.ERROR, "Failed to generate Book ID: " + e.getMessage()).show();
+        }
     }
 }
+
